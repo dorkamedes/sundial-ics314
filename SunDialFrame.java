@@ -5,11 +5,7 @@
  */
 
 /**
-<<<<<<< HEAD
- * testt
-=======
- * Well this is a test
->>>>>>> branch 'master' of https://github.com/briceorbryce/sundial-ics314.git
+ * 
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
