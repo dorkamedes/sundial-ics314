@@ -1,12 +1,11 @@
 
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
 /**
- *
+ * Well this is a test
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
