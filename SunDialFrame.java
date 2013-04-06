@@ -1,7 +1,7 @@
 package sundial;
 
 /**
- * 
+ *  Got rid of lalala
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
