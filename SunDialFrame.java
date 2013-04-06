@@ -10,8 +10,9 @@
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
-	/***/
+	/**SerialVersionUID*/
 	private static final long serialVersionUID = 1L;
+	
 	/**Latitude*/
 	@SuppressWarnings("unused")
 	private double latitude = 0;
