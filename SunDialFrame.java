@@ -6,7 +6,7 @@
  */
 
 /**
- *
+ * 
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
