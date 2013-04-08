@@ -1,7 +1,7 @@
 package sundial;
 
 /**
- * Now I should see this...
+ * 
  * @author briceorbryce
  */
 public class SunDialFrame extends javax.swing.JFrame {
