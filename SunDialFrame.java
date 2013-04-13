@@ -7,7 +7,7 @@ package sundial;
 public class SunDialFrame extends javax.swing.JFrame {
 	/**SerialVersionUID*/
 	private static final long serialVersionUID = 1L;
-	
+
 	/**Latitude*/
 	private double latitude;
 	/**Longitude*/
@@ -16,13 +16,13 @@ public class SunDialFrame extends javax.swing.JFrame {
 	private static final String popupLat = "Degrees-Minutes-Seconds"; //$NON-NLS-1$
 	/**Tooltip string*/
 	private static final String format = "Format: [Degrees][Minutes][Seconds]"; //$NON-NLS-1$
-	
+
 	/**
 	 * Creates new form SunDialFrame
 	 */
 	public SunDialFrame() {
 		initComponents();
-		
+
 		// Sets the location to the middle of the screen
 		setLocationRelativeTo(null);
 	}
@@ -197,6 +197,10 @@ public class SunDialFrame extends javax.swing.JFrame {
 		if (this.jComboBoxFractionOrDegArcSec.getSelectedItem().equals(SunDialFrame.popupLat)) {
 			this.jTextFieldLatitude.setToolTipText(null);
 		}
+	}
+
+	private static void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
+		System.out.println("Can we print? =]"); //$NON-NLS-1$
 	}
 
 	/**
