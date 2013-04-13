@@ -1,6 +1,10 @@
 package sundial;
 
 /**
+<<<<<<< HEAD
+ * <( X_X <)
+=======
+>>>>>>> 8300f5cded35ca70e54ad61e2a67b23909ded4e2
  * check me amy
  * @author briceorbryce
  */
