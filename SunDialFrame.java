@@ -175,6 +175,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 	}
 
 	/**
+	 * Opens the about page.
+	 * 
 	 * @param evt clicked the about page
 	 */
 	public void jMenuItemAboutActionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +184,9 @@ public class SunDialFrame extends javax.swing.JFrame {
 	}
 
 	/**
+	 * When you mouse over the latitude text field, the tooltip is shown if 
+	 * degree/arc/sec is selected in the dropdown menu.
+	 * 
 	 * @param evt enters textbox
 	 */
 	public void tooltiplatitudeEnter(java.awt.event.MouseEvent evt) {
@@ -191,6 +196,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 	}
 
 	/**
+	 * When you move the mouse outside of the text field, set tooltip to null.
+	 * 
 	 * @param evt exits textbox
 	 */
 	public void tooltipLatExit(java.awt.event.MouseEvent evt) {
@@ -199,11 +206,19 @@ public class SunDialFrame extends javax.swing.JFrame {
 		}
 	}
 
+	/**
+	 * Prints the gnomon.
+	 * 
+	 * @param evt print
+	 */
 	private static void jMenuItemPrintActionPerformed(java.awt.event.ActionEvent evt) {
 		System.out.println("Can we print? =]"); //$NON-NLS-1$
 	}
 
 	/**
+	 * When you mouse over the longitude text field, the tooltip is shown if
+	 * degree/arc/sec is selected in the dropdown menu.
+	 * 
 	 * @param evt enters textbox
 	 */
 	public void tooltipLongEnter(java.awt.event.MouseEvent evt) {
@@ -213,6 +228,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 	}
 
 	/**
+	 * When you move the mouse outside of the text field, set tooltip to null.
+	 * 
 	 * @param evt leaves textbox
 	 */
 	public void tooltipLongExit(java.awt.event.MouseEvent evt) {
@@ -222,6 +239,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 	}
 
 	/**
+	 * Main method.
+	 * 
 	 * @param args the command line arguments
 	 */
 	public static void main(String args[]) {
