@@ -32,8 +32,11 @@
 
 package sundial;
 
+import java.awt.Graphics2D;
+
 /**
- * Sundial GUI main class.
+ * Sundial GUI main class. Draws out the sundial ONLY AFTER input has been
+ * validated.
  * 
  * @author Amy
  * @author Reginald
@@ -83,7 +86,7 @@ public class SunDialFrame extends javax.swing.JFrame {
 		this.jComboBoxMonth = new javax.swing.JComboBox();
 		this.jComboBoxDay = new javax.swing.JComboBox();
 		this.jButtonSearch = new javax.swing.JButton();
-		this.jPanel2 = new javax.swing.JPanel();
+		this.jPanelSundial = new javax.swing.JPanel();
 		this.jMenuBar = new javax.swing.JMenuBar();
 		this.jMenuFile = new javax.swing.JMenu();
 		this.jMenuItemPrint = new javax.swing.JMenuItem();
@@ -142,8 +145,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 			}
 		});
 
-		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(this.jPanel2);
-		this.jPanel2.setLayout(jPanel2Layout);
+		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(this.jPanelSundial);
+		this.jPanelSundial.setLayout(jPanel2Layout);
 		jPanel2Layout.setHorizontalGroup(
 				jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGap(0, 0, Short.MAX_VALUE)
@@ -187,7 +190,7 @@ public class SunDialFrame extends javax.swing.JFrame {
 																						.addGap(120, 120, 120))
 																						.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInfoLayout.createSequentialGroup()
 																								.addContainerGap()
-																								.addComponent(this.jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																								.addComponent(this.jPanelSundial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 																								.addContainerGap())
 				);
 		jPanelInfoLayout.setVerticalGroup(
@@ -212,7 +215,7 @@ public class SunDialFrame extends javax.swing.JFrame {
 												.addGap(18, 18, 18)
 												.addComponent(this.jButtonSearch)
 												.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-												.addComponent(this.jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+												.addComponent(this.jPanelSundial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 												.addContainerGap())
 				);
 
@@ -323,8 +326,24 @@ public class SunDialFrame extends javax.swing.JFrame {
 		}
 	}
 
-	private static void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
-		// TODO add your handling code here:
+	/**
+	 * User has hit search.
+	 * 
+	 * @param evt User hits search
+	 */
+	private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {
+		//TODO error checking on months and days
+		this.draw();
+	}
+	
+	/**
+	 * Draws out the sundial.
+	 * 
+	 */
+	private void draw() {
+		System.out.println("Edit me Amy"); //$NON-NLS-1$
+		Graphics2D gfx = (Graphics2D)this.jPanelSundial.getGraphics();
+		gfx.drawLine(0, 0, 100, 100);
 	}
 
 	/**
@@ -377,8 +396,8 @@ public class SunDialFrame extends javax.swing.JFrame {
 	private javax.swing.JMenu jMenuHelp;
 	private javax.swing.JMenuItem jMenuItemAbout;
 	private javax.swing.JMenuItem jMenuItemPrint;
-	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanelInfo;
+	private javax.swing.JPanel jPanelSundial;
 	private javax.swing.JTextField jTextFieldLatitude;
 	private javax.swing.JTextField jTextFieldLongitude;
 	// End of variables declaration//GEN-END:variables
