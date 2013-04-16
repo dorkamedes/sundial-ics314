@@ -38,10 +38,8 @@ package sundial;
  * @author briceorbryce
  */
 public class AboutPage extends javax.swing.JDialog {
-
 	/**SerialVersionUID*/
 	private static final long serialVersionUID = 1L;
-
 
 	/**
 	 * Creates new form AboutPage
