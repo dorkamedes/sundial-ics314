@@ -8,7 +8,7 @@ public class SundialMath
 {
 	
 	//Converts hour to decimal
-	//from stackoverflow
+	//from stackoverflow5
 	public static double convertHourToDecimal(String degree)
 	{
     	if(!degree.matches("(-)?[0-6][0-9]\"[0-6][0-9]\'[0-6][0-9](.[0-9]{1,5})?"))
