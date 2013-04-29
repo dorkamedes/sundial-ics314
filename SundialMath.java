@@ -6,12 +6,28 @@ import java.math.*;
 
 public class SundialMath
 {
+	/*Standard Meridians
+	private const double SM_NEWWFOUNDLAND		=	52.5;
+	private const double SM_ATLANTIC				=	60;
+	private const double SM_EASTERN				=	75;
+	private const double SM_CENTRAL				=	90;
+	private const double SM_MOUNTAIN				=	105;
+	private const double SM_PACIFIC				=	120;
+	private const double SM_YUKON					=	135;
+	private const double SM_ALASKAHAWAII		=	150;
+	private const double SM_BERING				=	165;
+	end Standard Meridians */
+	
 	private double angleOfHour;
+	private double adjustedAngle;
+	private double eot;
 	
 	//constructor
 	public SundialMath()
 	{
-		angleOfHour = 0;
+		angleOfHour		=	0;		//angle of hour of the gnomon
+		adjustedAngle 	=	0;		//angle adjusted for local apparent time
+		eot				=	0;		//eot = Equation of Time
 	}
 	
 	//return the angleOfHour
@@ -36,6 +52,50 @@ public class SundialMath
 	public void setAngleOfHour(double t, double phi)
 	{	
 		angleOfHour = Math.toDegrees(Math.atan(Math.tan(Math.toRadians(t))*Math.sin(Math.toRadians(phi))));
+	}
+	
+	/**			
+		@params:	double longitude:				the precise longitudinal location of the gnomon in degrees
+					double standardMeridian:	the nearest Standard Meridian W of the gnomon in degrees
+		
+		finds the angle of the hour line for the gnomon
+		adjusted for local apparent time in radians
+	 */
+	public void setAdjustedAngle(double longitude, double standardMeridian)
+	{
+		adjustedAngle = Math.toRadians(longitude - standardMeridian);
+	}
+	
+	/**			
+		@return:	adjustedAngle	
+		
+		returns the adjusted angle of hour line in radians
+	 */
+	public double getAdjustedAngle()
+	{
+		return adjustedAngle;
+	}
+	
+	/**			
+		@params:	int dayOfTheYear:		the day of the year ie Jan 1 is day 1, Feb 1 is day 32, Dec 31 is day 365
+		
+		calculates the Equation of Time in radians
+	 */
+	public void setEOT(int dayOfTheYear)
+	{
+		double b = Math.toRadians(360 * (dayOfTheYear - 81) / 365);
+		
+		eot = 9.87 * Math.sin(2 * b) - 7.53 * Math.cos(b) - 1.5 * Math.sin(b);
+	}
+	
+	/**			
+		@return:	eot
+		
+		returns the Equation of Time
+	 */
+	public double getEOT()
+	{
+		return eot;
 	}
 	
 	/**				
