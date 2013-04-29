@@ -5,19 +5,7 @@
 import java.math.*;
 
 public class SundialMath
-{
-	/*Standard Meridians
-	private const double SM_NEWWFOUNDLAND		=	52.5;
-	private const double SM_ATLANTIC				=	60;
-	private const double SM_EASTERN				=	75;
-	private const double SM_CENTRAL				=	90;
-	private const double SM_MOUNTAIN				=	105;
-	private const double SM_PACIFIC				=	120;
-	private const double SM_YUKON					=	135;
-	private const double SM_ALASKAHAWAII		=	150;
-	private const double SM_BERING				=	165;
-	end Standard Meridians */
-	
+{	
 	private double angleOfHour;
 	private double adjustedAngle;
 	private double eot;
